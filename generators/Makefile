@@ -1,6 +1,6 @@
 
 SHEBANG = "\#!/usr/bin/env node"
-EXECUTABLES = bin/v8.0 bin/v8.1 bin/v8.2 bin/v8.3 bin/v8.4 bin/v8.5
+EXECUTABLES = bin/v8.0 bin/v8.1 bin/v8.2 bin/v8.3 bin/v8.4 bin/v8.5 bin/v9.0 bin/v9.1
 
 .PHONY: all clean new test
 
