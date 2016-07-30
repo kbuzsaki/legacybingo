@@ -152,7 +152,7 @@ var BingoGenerator = function(bingoList, options) {
         options.baselineTime = options.baselineTime || 12;
         options.timePerDifficulty = options.timePerDifficulty || 0.5;
     }
-    
+
     this.baselineTime = options.baselineTime || BASELINE_TIME;
     this.timePerDifficulty = options.timePerDifficulty || TIME_PER_DIFFICULTY;
 
@@ -603,11 +603,11 @@ BingoGenerator.prototype.filterSynergyValuesForType = function(type, synergies) 
     synergies.sortNumerically();
 
     var filter = this.synergyFilters[type] || "";
-    if (filter.startsWith("min")) {
+    if (filter.indexOf("min") == 0) {
         var count = Number(filter.split(" ")[1]);
         return synergies.slice(0, count);
     }
-    else if (filter.startsWith("max")) {
+    else if (filter.indexOf("max") == 0) {
         var count = Number(filter.split(" ")[1]);
         synergies.reverse();
         return synergies.slice(0, count);
