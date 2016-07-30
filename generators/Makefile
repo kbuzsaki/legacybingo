@@ -17,7 +17,7 @@ bin/%: %/generator.js %/goal-list.js lib/*.js
 	chmod +x $@
 
 clean:
-	rm -f $(EXECUTABLE)
+	rm -f $(EXECUTABLES)
 
 new: clean all
 
