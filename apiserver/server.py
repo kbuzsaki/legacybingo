@@ -21,7 +21,7 @@ def index():
 
 @app.route('/api/bingo/legacy/card')
 def card():
-    version = request.args.get("version", "v9.1")
+    version = request.args.get("version", "v9.2")
     seed = request.args.get("seed", random.randint(0, 10000))
 
     # validate version
